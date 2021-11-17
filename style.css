@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 12px;
+}
+
+#root {
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #6495edb3;
+    align-content: stretch;
+}
+
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    background-color: cornflowerblue;
+    box-shadow: 0 1px 0 1px cornflowerblue;
+}
+
+.header button {
+    height: 6rem;
+    width: 15rem;
+    margin: 3rem 0;
+}
+
+.header input {
+    height: 6rem;
+    width: 13rem;
+    margin: 3rem 0;
+}
+
+input[type="number"]
+{
+    font-size:24px;
+    text-align: center;
+}
+input::placeholder {
+    font-size: 12px;
+    font-weight: 600;
+    
+}
+
+#root div {
+    display: block;
+    font-size: 24px;
+    color: #f2f2f2;
+    padding: 30px;
+    font-weight: 600;
+    width: 60px;     
+}
+
+button {
+  height: 48px;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  will-change: box-shadow,transform;
+  font-size: 20px;
+}
+
+button:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+button:hover {
+  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
