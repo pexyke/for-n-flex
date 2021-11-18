@@ -4,7 +4,6 @@ const generateArray = function(amount) {
     let zero = ("0").repeat(length)
     for (let i = 0; i < amount; i++)
         newArray[i] = (zero + (i+1)).slice(-length)
-
     return newArray
 }
 
