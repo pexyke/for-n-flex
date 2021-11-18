@@ -1,50 +1,10 @@
 const generateArray = function(amount) {
     let newArray = []
-    
-    // 10-ig
-        if(amount <= 10) {
-            for (let i = 0; i < amount; i++) {
-                    if(i < 9) {
-                    newArray.push("0" + (i+1))
-                } 
-                    if(i == 9) {
-                newArray.push("10")
-                }
-            }
-        }
-    // 1000-ig
-        if (amount <= 1000 && amount > 10) {
-            for (let i = 0; i < amount; i++) {
-                    if (i < 9) {
-                    newArray.push("00" + (i+1))
-                }   if (i < 99 && i > 9) {
-                    newArray.push("0" + (i+1))
-                }   if (i == 99) {
-                    newArray.push("100")
-                }   if(i >= 100 && i < 1000) {
-                    newArray.push((i+1))
-                }   
-            }
-        }
-    //10000-ig
-        if (amount <= 10000 && amount > 1000){
-            for (let i = 0; i < amount; i++) {
-                    if (i < 9) {
-                    newArray.push("000" + (i+1))
-                    }
-                    if (i < 99 && i > 9) {
-                    newArray.push("00" +(i+1))
-                    }
-                    if (i > 99 && i < 999) {
-                    newArray.push("0" + (i+1))
-                    }
-                    if (i > 999 && i < 10000) {
-                    newArray.push((i+1))
-                    }
-                }
-        }
-    
-    
+    let length = amount.toString().length
+    let zero = ("0").repeat(length)
+    for (let i = 0; i < amount; i++)
+        newArray[i] = (zero + (i+1)).slice(-length)
+
     return newArray
 }
 
